@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import 'firebase/auth';
 import Constants from 'expo-constants';
-
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -11,10 +11,6 @@ import Constants from 'expo-constants';
 // import {...} from "firebase/firestore";
 // import {...} from "firebase/functions";
 // import {...} from "firebase/storage";
-
-
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -28,9 +24,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-
-//const auth = getAuth(app);
-
 
 export default app;

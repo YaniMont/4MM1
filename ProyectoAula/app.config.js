@@ -1,8 +1,15 @@
-import "dotenv/config"
+import 'dotenv/config'
 
 export default {
-
   "expo": {
+    "plugins": [
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
+        }
+      ]
+    ],
     "name": "ProyectoAula",
     "slug": "ProyectoAula",
     "version": "1.0.0",
@@ -35,7 +42,7 @@ export default {
       firebaseProjectId: process.env.FIREBASE_PROJECT_ID,
       firebaseStorageBucket: process.env.FIREBASE_STORAGE_BUCKET,
       firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-      firebaseAppId: process.env.FIREBASE_APP_ID,
+      firebaseAppId: process.env.FIREBASE_APP_ID
     }
   }
- }
+}
